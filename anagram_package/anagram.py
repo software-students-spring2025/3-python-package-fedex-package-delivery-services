@@ -1,6 +1,7 @@
 import pickle
 import time
 from typing import List, Set
+import os
 
 _WORD_CACHE = None
 
@@ -9,7 +10,7 @@ def load_word_list() -> Set[str]:
     if _WORD_CACHE is not None:
         return _WORD_CACHE
     try:
-        with open("words.pkl", 'rb') as f:
+        with open(os.path.join(os.path.dirname(__file__), "words.pkl"), 'rb') as f:
             _WORD_CACHE = pickle.load(f)
         return _WORD_CACHE
     except (FileNotFoundError, pickle.UnpicklingError):

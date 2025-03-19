@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2288d6a6de4742bcfe085c1318bcecec16f973d6402d1a8adcdc06066f8c52dc"
+            "sha256": "51ac66cf606a469a95f06ef584712bd2338de41f22c39f026026475e13e2c601"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,10 @@
         ]
     },
     "default": {
+        "anagram-package": {
+            "editable": true,
+            "file": "."
+        },
         "backports.tarfile": {
             "hashes": [
                 "sha256:77e284d754527b01fb1e6fa8a1afe577858ebe4e9dad8919e34c862cb399bc34",

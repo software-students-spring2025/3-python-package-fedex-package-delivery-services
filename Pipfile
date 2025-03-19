@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+anagram_package = {file = ".", editable = true}
 build = "*"
 pytest = "*"
 coverage = "*"

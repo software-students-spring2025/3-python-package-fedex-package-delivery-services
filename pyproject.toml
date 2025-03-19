@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anagram_package"
+description = "A package with fun functions for anagrams, pallidromes, and words with missing letters."
+version = "0.1.1"
+authors = [
+  { name="Wyatt Destabelle"},
+  {name = "Nick Michael"},
+  {name = "Alan Chen"},
+  {name = "Isaac Fisher"}
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "package"]
+requires-python = ">=3.7"
+
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services"
+"Repository" = "https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services.git"
+"Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services/issues"
+

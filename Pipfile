@@ -10,8 +10,12 @@ pytest = "*"
 coverage = "*"
 pytest-cov = "*"
 twine = "*"
+anagram-package = {file = ".", editable = true}
 
 [dev-packages]
+pytest = "*"
+build = "*"
+twine = "*"
 
 [requires]
 python_version = "3"

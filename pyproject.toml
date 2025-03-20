@@ -26,3 +26,5 @@ dev = ["pytest"]
 "Repository" = "https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services.git"
 "Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services/issues"
 
+[project.scripts]
+anagram_package = "anagram_package.__main__:main"

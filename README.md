@@ -34,6 +34,9 @@ This Program currently contains four functions:
         - `words`: Required. A List of Strings each containing only one word (no spaces).
    - Return: Retursn a list of Strings containing all the Strings from `words` that are palindromic.
 
+## Program Usage Example 
+[Example Program](https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services/blob/main/anagram_package/__main__.py)
+
 ## Contributions
 
 Please preform the following steps if you wish to make a contribution to the project:

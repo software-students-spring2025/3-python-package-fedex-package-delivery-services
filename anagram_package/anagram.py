@@ -12,7 +12,7 @@ def load_word_list() -> set:
         return _WORD_CACHE
     
     try:
-        word_list_path = importlib.resources.files(__name__) / "words.pkl"
+        word_list_path = importlib.resources.files('anagram_package') / "words.pkl"
         with word_list_path.open("rb") as f:
             _WORD_CACHE = pickle.load(f)
         return _WORD_CACHE

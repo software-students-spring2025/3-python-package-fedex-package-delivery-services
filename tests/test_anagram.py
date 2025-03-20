@@ -67,3 +67,39 @@ def test_create_anagram_non_alpha_chars():
     assert(anagram.create_anagram("bat5") == [])
 
 
+@pytest.mark.parametrize("check_anagram_invalid_inputs", [
+    (5, 5),
+    ("h", 5),
+    (5, "h"),
+    ("h", True),
+    (False, "h"),
+    ("h", {"test": "test"}),
+    ({"test": "test"}, "h"),
+    ("h", ["h", "h"]),
+    (["h", "h"], "h")
+])
+def test_check_anagram_invalid(check_anagram_invalid_inputs):
+    with pytest.raises(Exception) as e:
+        anagram.check_anagram(*non_string_inputs)
+
+@pytest.mark.parametrize("check_anagram_matches", [
+    ("", ""),
+    ("h", "h"),
+    ("asdf", "adsf"),
+    ("asdf", "asfd"),
+    ("asdf", "fads"),
+    ("aaaa", "aaaa"),
+    ("asdfghjkl", "lkjhgfdsa")
+])
+def test_check_anagram_matches(check_anagram_matches):
+    assert(anagram.check_anagram(*check_anagram_matches))
+
+@pytest.mark.parametrize("check_anagram_non_matches", [
+    ("", "h"),
+    ("h", ""),
+    ("asdf", "asdfg"),
+    ("asdfg", "gfds"),
+    ("hh", "h")
+])
+def test_check_anagram_non_matches(check_anagram_non_matches):
+    assert(not anagram.check_anagram(*check_anagram_non_matches))

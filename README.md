@@ -12,7 +12,7 @@ Authors:
 ## Installation
 
 Install this package using pip: \
-`pip install anagram-package`
+`pip install --upgrade anagram-package`
 
 ## Running the Package
 

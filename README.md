@@ -3,7 +3,7 @@
 # Anagram Package
 A package that contains a collection of playful word based functions, allowing you generate and check anagrams, as well as solve missing letter puzzles and find palindromes!
 
-[PyPI link]()
+[PyPI link](https://pypi.org/project/anagram-package/)
 Authors:
 - [Isaac Fisher](https://github.com/isaac1000000)
 - [Wyatt Destabelle](https://github.com/Wyatt-Destabelle)

@@ -38,11 +38,6 @@ python -m anagram_package
 from anagram_package.anagram import fill_word, create_anagram, check_anagram, filter_palindromes
 ```
 
-
-## Usage
-
-At the top of your file, use `from anagram_package import anagram`. No other configuration necessary!
-
 ## Functions
 This Program currently contains four functions:
 - fill_word(pattern): This takes a String containing one word with any number of letters replaced with an underscore '_', and returns all words that could fill the gap. eg. "Pyt_on" would return "Python".

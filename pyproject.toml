@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "anagram_package"
 description = "A package with fun functions for anagrams, pallidromes, and words with missing letters."
-version = "0.1.1"
+version = "1.0.0"
 authors = [
   { name="Wyatt Destabelle"},
   {name = "Nick Michael"},

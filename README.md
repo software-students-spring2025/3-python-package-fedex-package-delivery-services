@@ -14,25 +14,64 @@ Authors:
 Install this package using pip: \
 `pip install anagram-package`
 
+## Usage
+
+At the top of your file, use `from anagram_package import anagram`. No other configuration necessary!
+
 ## Functions
 This Program currently contains four functions:
-1. fill_word(pattern): This takes a String containing one word with any number of letters replaced with an underscore '_', and returns all words that could fill the gap. eg. "Pyt_on" would return "Python".
+- fill_word(pattern): This takes a String containing one word with any number of letters replaced with an underscore '_', and returns all words that could fill the gap. eg. "Pyt_on" would return "Python".
     - Parameters:
         - `pattern`: Required. A String containing only one word (no spaces), with any amount of letters replaced with an underscore ('_'). 
     - Return: Returns a list of strings, respresenting all words that could fill the missing spaces in the word given in `pattern`.
-2. create_anagram(word): This takes a String containing one word, and returns a list of strings containing every anagram of that word.
+    - Example:
+
+```
+from anagram_package import anagram
+
+# Returns ["article"]
+anagram.fill_word("art__le")
+```
+
+- create_anagram(word): This takes a String containing one word, and returns a list of strings containing every anagram of that word.
    - Parameters:
         - `word`: Required. A String containing only one word (no spaces).
     - Return: Returns a list of strings, respresenting anagrams of the word entered in `word`.
-3. check_anagram(word1,word2): This takes two strings, each containing one word (no spaces), and checks if they are anagrams of each other. It will return a boolean of the result of the comparision.
+
+```
+from anagram_package import anagram
+
+# Returns ["pulper", "repulp"]
+anagram.create_anagram("purple")
+```
+
+- check_anagram(word1,word2): This takes two strings, each containing one word (no spaces), and checks if they are anagrams of each other. It will return a boolean of the result of the comparision.
     - Parameters:
         - `word1`: Required. A String containing only one word (no spaces).
         - `word2`: Required. A String containing only one word (no spaces).
     - Return: Returns a boolean, which is true if `word1` and `word2` are anagrams, and false if not.
-4. filter_palindromes(words): Takes a list of Strings each containing only one word (no spaces), and returns a list of the words that are palindromes.
+
+```
+from anagram_package import anagram
+
+# Returns True
+anagram.check_anagram("asdf", "fads")
+
+# Returns False
+anagram.check_anagram("asdf", "purple")
+```
+
+- filter_palindromes(words): Takes a list of Strings each containing only one word (no spaces), and returns a list of the words that are palindromes.
    - Parameters:
         - `words`: Required. A List of Strings each containing only one word (no spaces).
    - Return: Retursn a list of Strings containing all the Strings from `words` that are palindromic.
+
+```
+from anagram_package import anagram
+
+# Returns ["aaa", "aba", "abba"]
+anagram.filter_palindromes(["aaa", "aba", "abba", "abab"])
+```
 
 ## Program Usage Example 
 [Example Program](https://github.com/software-students-spring2025/3-python-package-fedex-package-delivery-services/blob/main/anagram_package/__main__.py)

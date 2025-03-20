@@ -43,7 +43,7 @@ anagram.create_anagram("purple")
 #### `check_anagram(word1, word2)`
 
 - `word1`: A string with a word
-- `word2`: A string with a word to compare to `word1` for anagram status
+- `word2`: A string with a word to compare to `word1` to see if they are anagrams
 
 Returns a `bool` indicating whether or not `word1` and `word2` are anagrams of each other
 
@@ -58,3 +58,15 @@ anagram.check_anagram("bat", "artichoke")
 ```
 
 #### `filter_palindromes(words, min_length)`
+
+- `words`: A list of words that are potential palindromes
+- `min_length`: An integer representing the minimum accepted length for a palindrome when filtering
+
+Returns a list of strings containing all palindromes found within `words`
+
+```
+from anagram_package import anagram
+
+# Returns ["aa", "aba"]
+anagram.filter_palindromes(["a", "aa", "aba", "ab"], 2)
+```

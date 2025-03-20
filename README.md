@@ -14,6 +14,31 @@ Authors:
 Install this package using pip: \
 `pip install anagram-package`
 
+## Running the Package
+
+### Option 1: Use the command-line interface
+
+Type the following in your terminal to launch the interactive menu:
+
+`
+anagram_package
+`
+
+### Option 2: Run as a Python module
+
+You can also run the package as a Python module:
+
+`
+python -m anagram_package
+`
+
+### Option 3: Import into your Python code
+
+```
+from anagram_package.anagram import fill_word, create_anagram, check_anagram, filter_palindromes
+```
+
+
 ## Functions
 This Program currently contains four functions:
 1. fill_word(pattern): This takes a String containing one word with any number of letters replaced with an underscore '_', and returns all words that could fill the gap. eg. "Pyt_on" would return "Python".

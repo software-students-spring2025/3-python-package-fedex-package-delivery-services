@@ -3,7 +3,7 @@
 # Anagram Package
 A package that contains a collection of playful word based functions, allowing you generate and check anagrams, as well as solve missing letter puzzles and find palindromes!
 
-[PyPI link](https://pypi.org/project/anagram-package/)
+[PyPI link](https://pypi.org/project/anagram-package/) \
 Authors:
 - [Isaac Fisher](https://github.com/isaac1000000)
 - [Wyatt Destabelle](https://github.com/Wyatt-Destabelle)
@@ -12,7 +12,32 @@ Authors:
 ## Installation
 
 Install this package using pip: \
-`pip install anagram-package`
+`pip install --upgrade anagram-package`
+
+## Running the Package
+
+### Option 1: Use the command-line interface
+
+Type the following in your terminal to launch the interactive menu:
+
+`
+anagram_package
+`
+
+### Option 2: Run as a Python module
+
+You can also run the package as a Python module:
+
+`
+python -m anagram_package
+`
+
+### Option 3: Import into your Python code
+
+```
+from anagram_package.anagram import fill_word, create_anagram, check_anagram, filter_palindromes
+```
+
 
 ## Usage
 

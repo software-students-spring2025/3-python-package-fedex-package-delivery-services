@@ -28,3 +28,10 @@ dev = ["pytest"]
 
 [project.scripts]
 anagram_package = "anagram_package.__main__:main"
+
+[tool.setuptools]
+packages = ["anagram_package"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+anagram_package = ["words.pkl"] 

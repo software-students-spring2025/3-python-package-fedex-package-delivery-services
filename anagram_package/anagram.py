@@ -1,21 +1,24 @@
 import pickle
 import time
 from typing import List, Set
-import os
+import importlib.resources
 
 _WORD_CACHE = None
 
-def load_word_list() -> Set[str]:
+def load_word_list() -> set:
+    """Load the word list from words.pkl inside the package."""
     global _WORD_CACHE
     if _WORD_CACHE is not None:
         return _WORD_CACHE
+    
     try:
-        with open(os.path.join(os.path.dirname(__file__), "words.pkl"), 'rb') as f:
+        word_list_path = importlib.resources.files('anagram_package') / "words.pkl"
+        with word_list_path.open("rb") as f:
             _WORD_CACHE = pickle.load(f)
         return _WORD_CACHE
     except (FileNotFoundError, pickle.UnpicklingError):
         print("Dictionary file not found or corrupted.")
-        return set() 
+        return set()
 
 # Takes a word with one or more letters missing "Pyt_on" and returns all possible words that could fill the gaps
 def fill_word(pattern: str) -> List[str]:

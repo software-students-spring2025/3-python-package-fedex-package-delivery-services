@@ -2,20 +2,22 @@ import pytest
 import time
 from anagram_package import anagram
 
-        
-@pytest.mark.parametrize("fill_word_invalid", [
-    0,
-    4,
-    True,
-    False,
-    {"dictionary": "invalid"},
-    [1, 2, 3],
-    (lambda x: x+1)
-])
-def test_fill_word_invalid(fill_word_invalid: list[object]):
+@pytest.fixture
+def non_string_inputs():
+        return ([
+        0,
+        4,
+        True,
+        False,
+        {"dictionary": "invalid"},
+        [1, 2, 3],
+        (lambda x: x+1)
+    ])
+
+def test_fill_word_invalid(non_string_inputs):
     # Tests for errors raised on invalid inputs
     with pytest.raises(Exception) as e:
-        anagram.fill_word(fill_word_invalid)
+        anagram.fill_word(non_string_inputs)
 
 @pytest.mark.parametrize("fill_word_expected", [
     ("", [""]),
@@ -39,3 +41,29 @@ def test_fill_word_efficiency():
         # it's not atrociously slow. Unlikely a word ever is greater than
         # 100 characters
         assert(end_time - start_time < i)
+
+
+def test_create_anagram_invalid(non_string_inputs):
+    # Tests for errors raised on invalid inputs
+    with pytest.raises(Exception) as e:
+        anagram.fill_word(non_string_inputs)
+
+@pytest.mark.parametrize("create_anagram_expected", [
+     ("", []),
+     ("a", ["a"]),
+     ("bore", ["boer", "robe"]),
+     ("purple", ["pulper", "repulp"]),
+     ("broken", [])
+])
+def test_create_anagram_valid(create_anagram_expected):
+    # Tests expected outputs on create_anagram
+    assert(anagram.create_anagram(create_anagram_expected[0]).sort() == create_anagram_expected[1].sort())
+
+def test_create_anagram_non_alpha_chars():
+    # Tests that the output of strings with non-alphabetic characters are empty
+    assert(anagram.create_anagram("bat@") == [])
+    assert(anagram.create_anagram("bat\n") == [])
+    assert(anagram.create_anagram("bat\r") == [])
+    assert(anagram.create_anagram("bat5") == [])
+
+

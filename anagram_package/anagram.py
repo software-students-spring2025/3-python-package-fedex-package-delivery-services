@@ -50,5 +50,5 @@ def check_anagram(word1: str, word2: str) -> bool:
     return sorted(word1.lower()) == sorted(word2.lower())
 
 # Takes a list of words and returns those which are palindromes
-def filter_palindromes(words: List[str], min_length: int = 3) -> List[str]:
+def filter_palindromes(words: List[str], min_length: int = 1) -> List[str]:
     return [word for word in words if len(word) >= min_length and word == word[::-1]]

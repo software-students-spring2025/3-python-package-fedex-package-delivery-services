@@ -10,6 +10,7 @@ pytest = "*"
 coverage = "*"
 pytest-cov = "*"
 twine = "*"
+anagram-package = {file = ".", editable = true}
 
 [dev-packages]
 pytest = "*"
